@@ -4,6 +4,7 @@ namespace fukuv0608
     {
         int vx = -5;
         int vy = -5;
+        int iTime = 0;
         public Form1()
         {
             InitializeComponent();
@@ -51,10 +52,12 @@ namespace fukuv0608
             // マウスカーソルの位置がLabel2の中央になるようにする
             label2.Left = fpos.X - label2.Width / 2;
             label2.Top = fpos.Y - label2.Height / 2;
-            if ((fpos.X>label1.Left) && (fpos.X<label1.Right) && (fpos.Y>label1.Top) && (fpos.Y<label1.Bottom))
+            if ((fpos.X > label1.Left) && (fpos.X < label1.Right) && (fpos.Y > label1.Top) && (fpos.Y < label1.Bottom))
             {
                 timer1.Stop();
             }
+            iTime++;
+            label3.Text = ($"Time:{iTime++}");
         }
 
 
